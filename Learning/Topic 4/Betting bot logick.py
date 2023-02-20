@@ -9,3 +9,4 @@ def say_hello(name, city, state):
 say_hello(['John', 'Smith'], 'Phoenix', 'Arizona')
 
 12
+9
