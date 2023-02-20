@@ -10,3 +10,4 @@ say_hello(['John', 'Smith'], 'Phoenix', 'Arizona')
 
 12
 9
+2
