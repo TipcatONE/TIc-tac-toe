@@ -1,0 +1,48 @@
+Используйте for, .split() и if, чтобы написать команду, которая выведет только те слова, которые начинаются с буквы 's':
+
+st = 'Print only the words that start with s in this sentence'
+st_split = st.split()
+for words in st_split:
+    if words[0][0] == "s" or words[0] == "S":
+        print(words)
+
+Out:start
+    s
+    sentence
+
+Используйте range(), чтобы распечатать все чётные числа от 0 до 10.
+
+for num in range(1,11):
+    if num %2 == 0:
+        print(num)
+
+
+Используйте генератор списков, чтобы создать список всех чисел от 1 до 50, которые делятся нацело на 3.
+
+[x for x in range (1,51) if x %3 == 0]
+
+Пройдите по словам в строке ниже, и если длина слова чётная, то напечатайте "Это слово имеет чётную длину!"
+
+st = 'Print every word in this sentence that has an even number of letters'
+value = "Это слово имеет чётную длину!"
+for letter in st.split():
+    if len(letter) %2 == 0:
+        print(letter + " " + value)
+
+
+Напишите программу, которая напечатает числа от 1 до 100. Но для тех чисел, которые делятся нацело на 3, вместо числа выведите "Fizz", а для чисел которые делятся нацело на 5, выведите "Buzz". А для чисел, которые делятся нацело и на 3, и на 5, выведите "FizzBuzz".
+for num in range(1,101):
+    if num %3 == 0:
+        print("fizz")
+    elif num %5 == 0:
+        print("buzz")
+    elif num %3 == 0 and num %5 == 0:
+        print("fizzbuzz")
+    else:
+        print(num)
+
+Используйте генераторы списков, чтобы создать список первых букв из всех слов в строке ниже:
+
+st = 'Create a list of the first letters of every word in this string'
+a = [letter[0] for letter in st.split()]
+print(a)

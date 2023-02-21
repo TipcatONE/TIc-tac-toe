@@ -1,0 +1,351 @@
+
+
+% 3 == 0 остаток равен 0
+
+
+
+
+
+Операторы If, Elif и Else
+  if условие:
+        выполняемый код
+  elif еще одно условие:
+        делаем другое
+  else:
+        выполняем другое
+
+  Примеры:
+
+Циклы for
+
+
+  итерируемы выполнять дейстиве для каждого объекта
+  можно выполнять по элементам списка и словаря
+  Пример:
+  mylist = [1,2,3,4,5,6,7,8,9,10]
+  for num in mylist:
+      print(num)
+  Out:
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+mylist = [1,2,3,4,5,6,7,8,9,10]
+  for num in mylist: для каждого числа в списке
+      print("hello world")
+  Out:
+  hello world
+  hello world
+  hello world
+  hello world
+  hello world
+  hello world
+  hello world
+  hello world
+  hello world
+  hello world
+
+ mylist = [1,2,3,4,5,6,7,8,9,10]
+for num in mylist:
+    if num % 2 == 0:
+        print(num)
+    else:
+        print("Add{}".format(num))
+ Out:
+Add1
+2
+Add3
+4
+Add5
+6
+Add7
+8
+Add9
+10
+
+list_sum = 0
+mylist = [1,2,3,4,5,6,7,8,9,10]
+for num in mylist:
+    list_sum = list_sum + num
+
+print(list_sum)
+ Out:55
+
+ for letter in "ziga":
+    print(letter)
+ Out:
+z
+i
+g
+a
+ for _ in "ziga": можно использовать _ если переменная больше не используется
+    print(_)
+
+Кортежи внутри списка
+mylist = [(1,2),(3,4),(5,6)]
+for b in mylist:
+    print(b)
+Out:
+(1, 2)
+(3, 4)
+(5, 6)
+
+Распаковка
+
+mylist = [(1,2),(3,4),(5,6)]
+for a,b in mylist:
+    print(b)
+    print(a)
+    Out:
+2
+1
+4
+3
+6
+5
+
+mylist = [(1,2),(3,4),(5,6)]
+for a,b in mylist:
+    print(b)
+Out:
+2
+4
+6
+
+Словари
+ Выполняется только для ключей
+mylist = {"k1":"value1","k2":"value3","k3":"value3"}
+for num in mylist:
+    print(num)
+Out:
+k1
+k2
+k3
+
+
+mylist = {"k1":"value1","k2":"value3","k3":"value3"}
+for num in mylist.items(): ключ занчение
+    print(num)
+Out:
+k1
+k2
+k3
+
+
+mylist = {"k1":"value1","k2":"value3","k3":"value3"}
+for num in mylist.values():
+    print(num)
+Out:
+value1
+value3
+value3
+
+Цикл while
+     Выполняет блок кода пока условие равно true
+     Пока бассейн не заполнен до краев продолжаем наливать воду
+     Пока кот голоден продолжаем кормить кота
+     так же можно добавить else
+    Синтаксис:
+        x = 0
+        while x < 5:
+              print(f"Текущие значение x:{x}")
+              x = x + 1
+        Out:
+        текущие значение x:0
+        текущие значение x:1
+        текущие значение x:2
+        текущие значение x:3
+        текущие значение x:4
+
+     x = x + 1 можно записать как x += 1
+
+          x = 0
+        while x < 5:
+              print(f"Текущие значение x:{x}")
+              x = x + 1
+        else:
+             print("стоп")
+        Out:
+        текущие значение x:0
+        текущие значение x:1
+        текущие значение x:2
+        текущие значение x:3
+        текущие значение x:4
+        стоп
+
+      break, continue, pass
+
+      break - выход из текущего цикла
+      continue - переходит в начало ближайщего цикла
+      pass - ничего не делает
+
+      pass заглушка
+      x = [1,2,3]
+
+      for num in x:
+            pass
+
+       continue
+       mystring = "sammy"
+       for letter in mystring:
+           if letter == "a"
+                  continue
+            print(letter)
+       Out:
+       s
+       m
+       m
+       y
+
+
+       Break
+       mystring = "sammy"
+       for letter in mystring:
+           if letter == "a"
+                  break
+            print(letter)
+        Out:
+       s
+
+       x = 0
+       while x < 5:
+           if x == 3:
+               break
+           print(x)
+           x += 1
+
+       Out:
+       0
+       1
+       2
+
+       Операторы
+       range(Начальное число, конечное)
+       Пример:
+       for i in range(1,100,можно указать размер шага) последние число не берется
+            print(i)
+       Out:
+       1-1001
+
+      index = 0
+      for num in "abcdefgeh":
+              print("Index -- {} letter -- {}".format(index,num))
+              index += 1
+
+
+       enumerate() намирует символы
+       Пример:
+       word = "abcdefg"
+       for item in enumerate(word):
+           print(item)
+       Out:
+        (0, 'a')
+        (1, 'b')
+        (2, 'c')
+        (3, 'd')
+        (4, 'e')
+        (5, 'f')
+        (6, 'g')
+
+      Распаковка картежий
+    word = "abcdefg"
+    for index,letter in enumerate(word):
+            print(index)
+            print(letter)
+            print("\n")
+
+
+    Функция zip собирает соответсвующие элементы в кортежи
+    a = [a,b,c,d,e,f]
+    b = [1,2,3,4,5,6]
+    for i in zip(a,b):
+          print(i)
+    Out:
+    ('a', 1)
+    ('b', 2)
+    ('c', 3)
+    ('d', 4)
+    ('e', 5)
+    ('f', 6)
+
+   Если список будеть больше чем другие значение будут проигнорированы
+
+   a = ['a','b','c','d','e','f']
+   b = [1,2,3,4,5,6]
+   c = [2.1,3.2]
+   for i in zip(a,b,c):
+      print(i)
+   Out:
+   ('a', 1, 2.1)
+   ('b', 2, 3.2)
+
+
+  in проверяет содерится ли значение в списке
+  Пример:
+  2 in [1,2,3]
+  True
+
+  a = [1,2,3,4,5]
+    b = int(input("Ввидите число --"))
+    c = b in a
+    if c == True:
+        print("Значение есть в списке")
+    else:
+    print("Значения нету в списке")
+
+    Используется для кортежий
+
+    b = {"key1":"value1"}
+    print("key1" in b.values()) для значений
+    print("key1" in b.keys()) для ключей
+    print("key1" in b.items()) дял всей пары
+
+
+    функция min(переменная) минимальное значение в списке
+    функция max(переменная) максимальное значение в списке
+
+    Библеотека random
+
+    from random import shuffle перетасовывает значение
+    a = [1,2,3,4,5,6,7,8,9,10]
+    shuffle(a)
+    print(a)
+    Out:[2, 4, 6, 3, 9, 10, 1, 5, 8, 7]
+
+    from random import randint случайное число
+    randint(0,100)
+
+
+Генераторы Списков (List Comprehensions)
+
+    Короткий цикл for
+
+    mystring = "hello world"
+    mylist = [letter for letter in mystring]
+    print(mylist)
+
+    Для чисел
+
+    mylist = [x for x in range(0,100)]
+    print(mylist)
+    Out:0-100
+
+    Можно добавлять if
+    mylist = [x for x in range(0,100) if x >= 1]
+    print(mylist)
+    Out:1 - 100
+                                       ОДНО И ТОЖЕ
+                                                     cel = [1,24,57,-12]
+    cel = [1,24,57,-12]                              fare = []
+    fare = [((9/5)* temp +32)for temp in cel]    ==  for temp in cel:
+    print(fare)                                          fare.append(((9/5)* temp +32))
+                                                     print(fare)
+                                                     Out:[33.8, 75.2, 134.60000000000002, 10.399999999999999]
+
