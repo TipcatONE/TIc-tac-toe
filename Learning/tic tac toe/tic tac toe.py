@@ -11,15 +11,17 @@ display_board(['#', 'X', 'o', 'X', 'o', 'x', 'o', 'x', 'o', '×'])
 
 
 def player_input():
-    player_1 = input("p1 == ")
-    if player_1 != "x":
-        return
+    player_1 = int(input("Print 1 if you wanna play x and 0 for play 0"'\n'"player 1 ="))
+    if player_1 != 1 or player_1 != 0:
+        print("Please write the number for choose side")
+    elif player_1 == 1:
+        return 1
     else:
-        return False
+        return 2
+    if player_1 == 1:
+        player_2 = 2
+    elif player_1 == 0:
+        player_2 = 1
 
 
 player_input()
-
-
-def proverka():
-    map(player_input(), proverka())
