@@ -12,27 +12,32 @@ display_board(test_board)
 
 def player_input():
     player_1 = input("choose the side X or O"'\n')
-    answers = set(["X", "x", "O", "o"])
-    zero = set(["O", "o"])
+    answers = {"X", "x", "O", "o"}
+    zero = {"O", "o"}
     while player_1 not in answers:
-        print(input("Please choose side"'\n'))
-        if player_1 not in zero:
-            return "x"
-        else:
-            return "o"
+        player_1 = input("Please choose side"'\n')
+        print(player_1)
+    if player_1 not in zero:
+        return "x"
+    else:
+        return "o"
 
 
 def place_marker(board):
     if player_input() == "x":
-        marker = "x"
+        marker = "X"
     else:
-        marker = "o"
+        marker = "O"
     position = int(input("Position ------"))
     if marker.upper() == marker:
         board[position] = marker
-    else:
-        board[position] = marker
 
 
+place_marker(test_board)
+display_board(test_board)
+place_marker(test_board)
+display_board(test_board)
+place_marker(test_board)
+display_board(test_board)
 place_marker(test_board)
 display_board(test_board)
