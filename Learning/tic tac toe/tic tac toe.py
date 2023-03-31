@@ -16,10 +16,10 @@ def player_input():
     zero = set(["O", "o"])
     while player_1 not in answers:
         print(input("Please choose side"'\n'))
-    if player_1 not in zero:
-        return "x"
-    else:
-        return "o"
+        if player_1 not in zero:
+            return "x"
+        else:
+            return "o"
 
 
 def place_marker(board):
@@ -28,7 +28,7 @@ def place_marker(board):
     else:
         marker = "o"
     position = int(input("Position ------"))
-    if marker.upper() == "X":
+    if marker.upper() == marker:
         board[position] = marker
     else:
         board[position] = marker
@@ -36,10 +36,3 @@ def place_marker(board):
 
 place_marker(test_board)
 display_board(test_board)
-
-
-def win_check(board, mark):
-
-
-
-win_check(test_board, )
